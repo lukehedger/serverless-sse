@@ -1,0 +1,10 @@
+- Use htmx and [SSE](https://htmx.org/extensions/server-sent-events/) to broadcast trail of events to UI
+- EB → Lambda (SSEs with streaming Function URLs) → HTMX
+    - https://stackoverflow.com/questions/77453717/how-to-use-nest-js-sse-with-aws-lambda
+    - https://community.openai.com/t/streaming-responses-exploring-cost-efficient-alternatives-to-sse-with-aws-lambda-api-gateway/354487/5
+    - https://docs.aws.amazon.com/lambda/latest/dg/configuration-response-streaming.html
+    - Use Scheduler to simulate events - cost?
+- Start with htmx page and test server
+- Then deploy htmx page to Cloudflare
+- Then hook up to Lambda fURL SSE
+- Bonus websockets version: Use [htmx](https://htmx.org/extensions/web-sockets/), AppSync and EventBridge [(to AppSync target)](https://aws.amazon.com/blogs/compute/build-real-time-applications-with-amazon-eventbridge-and-aws-appsync/)
